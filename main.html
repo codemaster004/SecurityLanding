@@ -103,16 +103,17 @@
   </section>
 
   <script>
-    let myText = "Haha wlasnie kradne dane osobowe osoby~ Numer karty kredytowej (niewarzne ze osoba nie ma)~ Numery telefonu~ Kody do librusa~ Posty na facebook~ ~ A teraz pobralem pieniadze osoby~ Wiec stan konta osoby wynosi 12.345.679 euro~ (Od tworcow) To byly tylko zarty, nic takiego sie nie stalo~ Ale da nam pan 6 prawda?";
+    let myText = "ssh ofiara@104.91.8.45~ sudo su -~ Password: **********~ git clone git@gitlab.com:gitlab-org/steal-personal-data.git~ sh steal-personal-data.sh~ Haha wlasnie kradne dane osobowe osoby~ Numer karty kredytowej~ Numery telefonu~ Kody do librusa~ Posty na facebook~ ~ A teraz pobralem pieniadze~ Wiec stan mojego konta osoby wynosi 12.345.679 euro~ (Od tworcow) To byly tylko zarty, nic takiego sie nie stalo~";
     let typing = document.querySelector('.typing'),
       curentIndex = 0;
 
     var startTyping = function(text) {
       var interval = setInterval(function() {
         if (text.length > curentIndex) {
-          typing.innerHTML += text[curentIndex];
           if (text[curentIndex] == "~") {
             typing.innerHTML += "<br>$"
+          } else {
+            typing.innerHTML += text[curentIndex];
           }
           curentIndex++;
         } else {
