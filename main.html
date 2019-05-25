@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Praca Grupowa z Informatyki</title>
+  <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+
+<body>
+  <header class="header">
+    <aside>
+      <div class="main">
+        <p>Tw&oacute;rcy:</p>
+      </div>
+      <div>&shy;</div>
+      <div class="osoba">
+        <a href="#">Bonalski Mateusz</a>
+      </div>
+      <div class="osoba">
+        <a href="#">Borek Kacper</a>
+      </div>
+      <div class="osoba">
+        <a href="#">Ciechanowicz Mateusz</a>
+      </div>
+      <div class="osoba">
+        <a href="#">Dąbkowski Filip</a>
+      </div>
+    </aside>
+
+    <article class="powitanie">
+      <header>
+        <h2>?No nasza strona jest o? Bonalski to jest twoje zad!</h2>
+      </header>
+      <div class="powitalny_content">
+        ???? ?????? ?? ????? ??????? ???? ? ?????????? ????, ??????? ?????????? ??????? ?????? ?????? ???????? ? ?????????. ??????? ??????? ??? ????? ??????????? ? ???? ????? ????? ?????? ?? ?? ????????.
+      </div>
+      <div class="guziki_box">
+        <button class="guzik menu-trigger">Menu</button>
+        <button class="guzik">Autorzy</button>
+
+        <nav id="nav">
+          <div class="container">
+            <button><a href="#">Wprowadzenie</a></button>
+            <button><a href="#">Press me</a></button>
+            <button><a href="#">Press me</a></button>
+            <button><a href="#">Press me</a></button>
+            <button><a href="#">Press me</a></button>
+            <button><a href="#">Press me</a></button>
+          </div>
+        </nav>
+      </div>
+    </article>
+
+    <article class="nie_obrazek">
+      <div class="nie_box">
+        <div class="bgc" id="bgc_l"></div>
+        <div class="nie_zdj" id="gostek-1">
+          <img src="user_4.jpg" alt="Zdjecie autora" id="gostek_l">
+        </div>
+      </div>
+      <div class="nie_box">
+        <div class="bgc" id="bgc_r"></div>
+        <div class="nie_zdj" id="gostek-2">
+          <img src="user_3.jpg" alt="Zdjecie autora" id="gostek_r">
+        </div>
+      </div>
+    </article>
+  </header>
+
+
+  <section class="section_first">
+    <article class="powitanie">
+      <header>
+        <h2>Co to jest złośliwe oprogramowanie?</h2>
+      </header>
+      <div class="powitalny_content">
+        „Złośliwe oprogramowanie” to oprogramowanie stworzone do zakłócania pracy komputera. Może ono wykradać z komputera informacje poufne, stopniowo...
+      </div>
+      <div class="dalej">
+        <a>Przejć dalej &raquo;</a>
+      </div>
+    </article>
+    <article class="example">
+      <div class="console">
+        <pre class="typing">$ </pre>
+      </div>
+    </article>
+  </section>
+
+  <section class="section_second">
+    <article class="powitanie">
+      <header>
+        <h2>Jak rozprzestrzenia się złośliwe oprogramowanie?</h2>
+      </header>
+      <div class="powitalny_content">
+        Złośliwe oprogramowanie może dostać się do komputera na wiele różnych sposobów. Oto kilka najczęstszych...
+      </div>
+      <div class="dalej">
+        <a>Przejć dalej &raquo;</a>
+      </div>
+    </article>
+  </section>
+
+  <script>
+    let myText = "Haha wlasnie kradne dane osobowe osoby~ Numer karty kredytowej (niewarzne ze osoba nie ma)~ Numery telefonu~ Kody do librusa~ Posty na facebook~ ~ A teraz pobralem pieniadze osoby~ Wiec stan konta osoby wynosi 12.345.679 euro~ (Od tworcow) To byly tylko zarty, nic takiego sie nie stalo~ Ale da nam pan 6 prawda?";
+    let typing = document.querySelector('.typing'),
+      curentIndex = 0;
+
+    var startTyping = function(text) {
+      var interval = setInterval(function() {
+        if (text.length > curentIndex) {
+          typing.innerHTML += text[curentIndex];
+          if (text[curentIndex] == "~") {
+            typing.innerHTML += "<br>$"
+          }
+          curentIndex++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 100);
+    }
+
+    function juzJest() {
+      console.log("tu" + scrollY);
+      if (scrollY >= 400) {
+        clearInterval(startNow);
+        startTyping(myText);
+      }
+    }
+
+    //startTyping(myText)
+    var startNow = setInterval(juzJest, 250);
+
+  </script>
+
+  <script>
+    let obrot_l = 0;
+    let obrot_r = 0;
+    let zdj = ["user_1.jpg", "user_2.jpg", "user_3.jpg", "user_4.jpg"];
+
+    function random(max) {
+      let random_n = Math.floor(Math.random() * max);
+      return random_n;
+    }
+
+    function zdj_l() {
+      document.getElementById("gostek_l").src = zdj[random(zdj.length)];
+      setTimeout(zdj_l_2, 5000);
+    }
+
+    function zdj_l_2() {
+      obrot_l -= 360;
+      document.getElementById("gostek-1").style.transform = "rotateY(" + obrot_l + "deg)";
+      document.getElementById("bgc_l").style.transform = "rotateY(" + (obrot_l + 180) + "deg)";
+      setTimeout(zdj_l, 1000);
+    }
+
+    function zdj_r() {
+      document.getElementById("gostek_r").src = zdj[random(zdj.length)];
+      setTimeout(zdj_r_2, 5000);
+    }
+
+    function zdj_r_2() {
+      obrot_r += 360;
+      document.getElementById("gostek-2").style.transform = "rotateY(" + obrot_r + "deg)";
+      document.getElementById("bgc_r").style.transform = "rotateY(" + (obrot_r + 180) + "deg)";
+      setTimeout(zdj_r, 1000);
+    }
+
+    zdj_l_2()
+    zdj_r_2()
+
+  </script>
+
+</body>
+
+</html>
