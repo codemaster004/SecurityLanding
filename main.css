@@ -200,6 +200,7 @@ nav {
 .nie_zdj img {
   width: 100px;
   height: 100px;
+  backface-visibility: hidden;
 }
 
 .bgc {
