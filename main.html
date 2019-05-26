@@ -83,12 +83,17 @@
     </article>
     <article class="example">
       <div class="console">
-        <pre class="typing">$ </pre>
+        <pre class="typing">~ </pre>
       </div>
     </article>
   </section>
 
   <section class="section_second">
+    <article class="demo">
+      <div class="console">
+        <pre class="typing"></pre>
+      </div>
+    </article>
     <article class="powitanie">
       <header>
         <h2>Jak rozprzestrzenia się złośliwe oprogramowanie?</h2>
@@ -103,7 +108,7 @@
   </section>
 
   <script>
-    let myText = "ssh ofiara@104.91.8.45~ sudo su -~ Password: **********~ git clone git@gitlab.com:gitlab-org/steal-personal-data.git~ sh steal-personal-data.sh~ Haha wlasnie kradne dane osobowe osoby~ Numer karty kredytowej~ Numery telefonu~ Kody do librusa~ Posty na facebook~ ~ A teraz pobralem pieniadze~ Wiec stan mojego konta osoby wynosi 12.345.679 euro~ (Od tworcow) To byly tylko zarty, nic takiego sie nie stalo~";
+    let myText = "ssh ofiara@104.91.8.45~ sudo su -~ Password: **********~ git clone git@gitlab.com:gitlab-org/steal-personal-data.git~ sh steal-personal-data.sh~ Haha wlasnie kradne dane osobowe~ Numer karty kredytowej~ Numery telefonu~ Kody do librusa~ Posty na facebook~ A teraz pobralem pieniadze~ I stan mojego konta wynosi 12.345.679 euro~ ~ (Od tworcow) To byly tylko zarty, nic takiego sie nie stalo~ CHYBA";
     let typing = document.querySelector('.typing'),
       curentIndex = 0;
 
@@ -111,7 +116,7 @@
       var interval = setInterval(function() {
         if (text.length > curentIndex) {
           if (text[curentIndex] == "~") {
-            typing.innerHTML += "<br>$"
+            typing.innerHTML += "<br>~"
           } else {
             typing.innerHTML += text[curentIndex];
           }
@@ -123,14 +128,12 @@
     }
 
     function juzJest() {
-      console.log("tu" + scrollY);
       if (scrollY >= 400) {
         clearInterval(startNow);
         startTyping(myText);
       }
     }
 
-    //startTyping(myText)
     var startNow = setInterval(juzJest, 250);
 
   </script>
