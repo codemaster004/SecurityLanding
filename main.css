@@ -44,7 +44,7 @@ body .header {
   box-sizing: border-box;
   width: 180%;
   height: 120vh;
-  background-image: linear-gradient(to right, #130cb7, #52e5e7);
+  background-image: linear-gradient(to right, #4f00bc, #18ffff);
   border-radius: 0% 0% 89% 59% / 0% 0% 100% 58%;
   margin-top: -45vh;
   margin-left: -50%;
@@ -292,7 +292,7 @@ nav {
 }
 
 .section_second {
-  background-image: linear-gradient(to right, #130cb7, #52e5e7);
+  background-image: linear-gradient(to right, #4f00bc, #18ffff);
   z-index: 100;
 }
 
@@ -309,9 +309,11 @@ nav {
   0% {
     letter-spacing: 5px;
   }
+
   50% {
     letter-spacing: 0px;
   }
+
   100% {
     letter-spacing: 5px;
   }
@@ -321,6 +323,7 @@ nav {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
