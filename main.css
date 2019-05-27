@@ -68,8 +68,12 @@ aside div {
 }
 
 article {
-  width: 35vw;
+  width: 45vw;
   display: inline-block;
+}
+
+.header article {
+  margin-left: 4%;
 }
 
 .powitanie {
@@ -164,7 +168,7 @@ nav {
 }
 
 .nie_obrazek {
-  margin-left: 10%;
+  margin-left: 8% !IMPORTANT;
 }
 
 .nie_box {
@@ -241,6 +245,7 @@ nav {
   position: relative;
   border-radius: 3px;
   box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, .15);
+  overflow: scroll;
 }
 
 .console::before,
@@ -251,17 +256,6 @@ nav {
   position: absolute;
   top: -15px;
   border-radius: 50%;
-}
-
-
-.console::before {
-  left: 3px;
-  background-color: #ff0000;
-}
-
-.console::after {
-  left: 15px;
-  background-color: #ffa500;
 }
 
 .typing {
@@ -281,6 +275,7 @@ nav {
 
 .section_first article {
   margin-top: 12%;
+  margin-left: 5%;
 }
 
 .section_first .dalej a {
@@ -292,13 +287,50 @@ nav {
   z-index: 100;
 }
 
+.section_second .powitanie {
+  margin-left: 40%;
+}
+
 .demo {
-  width: 41vw;
-  transform: translate(50px, -150px);
+  width: auto;
+  height: auto;
+  margin: 0;
+  position: absolute;
+  left: 29%;
+  bottom: -4%;
 }
 
 .section_second .powitanie {
   margin-top: 10%;
+}
+
+.section-thirt {
+  background-color: #fff;
+  z-index: 50;
+}
+
+.section-thirt a {
+  color: black;
+}
+
+.section-thirt .powitanie {
+  margin-top: 25vh;
+  margin-left: 5%;
+  color: black;
+  text-align: center;
+}
+
+.kaluza-box {
+  text-align: right;
+  width: 49vw;
+}
+
+.kaluza {
+  background-color: darkblue;
+  width: 70%;
+  height: 40vh;
+  display: inline-block;
+  border-radius: 100% 0% 0% 100% / 67% 0% 0% 30%;
 }
 
 @keyframes space {

