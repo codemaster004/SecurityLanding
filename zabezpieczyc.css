@@ -39,6 +39,10 @@ aside div {
   text-align: center;
 }
 
+.main {
+  height: 100%;
+}
+
 .plama {
   text-align: center;
   font-weight: 100;
@@ -48,7 +52,7 @@ aside div {
 }
 
 .plama:nth-of-type(1) {
-  width: 200xp;
+  width: 200px;
   height: 150px;
   background-image: linear-gradient(to right bottom, #330eff, #030bc9);
   position: absolute;
@@ -60,7 +64,7 @@ aside div {
 }
 
 .plama:nth-of-type(2) {
-  width: 200xp;
+  width: 200px;
   height: 150px;
   background-image: linear-gradient(to right bottom, #3fdbdb, #04adc3);
   position: absolute;
@@ -72,7 +76,7 @@ aside div {
 }
 
 .plama:nth-of-type(3) {
-  width: 200xp;
+  width: 200px;
   height: 150px;
   background-image: linear-gradient(to right bottom, #2678fc, #0060a7);
   position: absolute;

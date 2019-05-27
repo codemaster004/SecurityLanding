@@ -6,9 +6,15 @@
   <title>Security Landing</title>
   <link rel="stylesheet" href="main.css" type="text/css">
   <link rel="stylesheet" href="footer.css" type="text/css">
+  <link rel="stylesheet" href="reklama.css" type="text/css">
 </head>
 
 <body>
+  <div class="reklama" id="reklama">
+    <h1>REKLAMA</h1>
+    <p id="tuQla"></p>
+    <button onclick="clos()"><a href="https://portal.librus.pl/rodzina/synergia/loguj" target="_blank">Wstaw 6</a></button>
+  </div>
   <header class="header">
     <aside>
       <div class="main">
@@ -16,16 +22,16 @@
       </div>
       <div>&shy;</div>
       <div class="osoba">
-        <a href="#">Bonalski Mateusz</a>
+        <a href="#" onclick="uzupelni(3)">Bonalski Mateusz</a>
       </div>
       <div class="osoba">
-        <a href="#">Borek Kacper</a>
+        <a href="#" onclick="uzupelni(2)">Borek Kacper</a>
       </div>
       <div class="osoba">
-        <a href="#">Ciechanowicz Mateusz</a>
+        <a href="#" onclick="uzupelni(1)">Ciechanowicz Mateusz</a>
       </div>
       <div class="osoba">
-        <a href="#">Dąbkowski Filip</a>
+        <a href="#" onclick="uzupelni(0)">Dąbkowski Filip</a>
       </div>
     </aside>
 
@@ -193,7 +199,7 @@
       }
     }
 
-    //var startNow = setInterval(juzJest, 200);
+    var startNow = setInterval(juzJest, 200);
     window.addEventListener("keydown", startPisac)
 
   </script>
@@ -232,8 +238,8 @@
       setTimeout(zdj_r, 1000);
     }
 
-    //zdj_l_2()
-    //zdj_r_2()
+    zdj_l_2()
+    zdj_r_2()
 
   </script>
 
