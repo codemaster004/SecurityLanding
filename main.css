@@ -176,6 +176,7 @@ nav {
   height: 110px;
   position: relative;
   display: inline-block;
+  perspective: 300;
 }
 
 .nie_box:last-of-type {
@@ -194,7 +195,6 @@ nav {
   top: 0;
   left: 0;
   backface-visibility: hidden;
-  perspective: 300px;
 }
 
 .nie_zdj img {
@@ -216,7 +216,6 @@ nav {
   left: 0;
   transform: rotateY(180deg);
   backface-visibility: hidden;
-  perspective: 300px;
 }
 
 .section_first {
