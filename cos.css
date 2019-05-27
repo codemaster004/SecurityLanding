@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+body {
+  color: darkblue;
+}
+
+a {
+  color: darkblue;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+body .header {
+  box-sizing: border-box;
+  width: 180%;
+  height: 130vh;
+  background-color: #fff;
+  border-radius: 0% 0% 89% 59% / 0% 0% 100% 58%;
+  margin-top: -45vh;
+  margin-left: -50%;
+  padding: 45vh 0 0 50%;
+  position: relative;
+  display: block;
+  z-index: 400;
+}
+
+header aside {
+  width: 100vw;
+  height: 30px;
+  position: absolute;
+  top: 47vh;
+  left: 50vw;
+}
+
+aside div {
+  width: 16vw;
+  height: 30px;
+  float: left;
+  text-align: center;
+}
+
+.header article {
+  width: 50vw;
+  height: 70vh;
+  float: left;
+}
+
+.haslo {
+  width: 40vw;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-top: 35vh;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: inline-block;
+}
+
+.haslo-top {
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+
+.haslo-bottom {
+  font-size: 17px;
+  letter-spacing: 11px;
+}
+
+.header article p {
+  width: 40vw;
+  margin-top: 35vh;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  line-height: 23px;
+  word-break: break-all;
+  letter-spacing: 1px;
+  font-weight: 200;
+  hyphens: auto;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"] {
+  display: inline-block;
+  margin: 0 2.2rem
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - 3 * 6rem) / 3);
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 3 * 6rem) / 2);
+}
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform .3s;
+}
+
+.feature-box__icon {
+  font-size: 6rem;
+  margin-bottom: .5rem;
+  display: inline-block;
+  background-image: linear-gradient(to right, #4f00bc, #18ffff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.feature-box:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+}
+
+.section-features {
+  padding: 25rem 0 5rem 0;
+  background-image: linear-gradient(to right, #4f00bc, #18ffff);
+  background-size: cover;
+  margin-top: -15rem;
+  text-align: center;
+}
